@@ -1,0 +1,276 @@
+/* Reset di base e Stili Generali */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Sfondo leggermente grigio */
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px; /* Larghezza massima per leggibilità */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Sfondo bianco per il contenuto principale */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5a3e36; /* Un marrone caldo per i titoli */
+    margin-bottom: 0.7em;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #e0c9a6; /* Un accento color sabbia */
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #7a5c57;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #777;
+    font-style: italic;
+}
+
+/* Navigazione del Menù */
+.menu-nav {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #5a3e36;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-nav a:hover,
+.menu-nav a.active { /* Per eventuale JS che evidenzi la sezione attiva */
+    background-color: #5a3e36;
+    color: #fff;
+}
+
+.menu-nav a.order-button-nav {
+    background-color: #c88873; /* Colore diverso per il pulsante Ordina */
+    color: white;
+}
+.menu-nav a.order-button-nav:hover {
+    background-color: #b0705a;
+}
+
+
+/* Sezioni del Menù */
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: flex-start; /* Allinea gli elementi all'inizio se l'immagine è più alta del testo */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+.menu-item:last-child {
+    border-bottom: none; /* Rimuove il bordo per l'ultimo elemento della sezione */
+    margin-bottom: 0;
+}
+
+.menu-item img {
+    width: 150px; /* Larghezza fissa per le immagini */
+    height: 110px; /* Altezza fissa per uniformità */
+    object-fit: cover; /* Assicura che l'immagine copra l'area senza distorsioni */
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid #eee;
+}
+
+.menu-item-details {
+    flex: 1; /* Permette al testo di occupare lo spazio rimanente */
+}
+
+.menu-item-details p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Per voci di menù senza immagine (es. bevande) */
+.menu-item-simple {
+    padding: 5px 0;
+}
+.menu-item-simple h3 {
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif; /* Stile più semplice per queste voci */
+    color: #555;
+    font-weight: normal;
+}
+
+
+/* Sezione Modulo d'Ordine */
+.order-form-section {
+    background-color: #fdfaf6; /* Un colore di sfondo leggermente diverso */
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    border: 1px solid #e0c9a6;
+}
+
+.order-form-section h2 {
+    text-align: center;
+    border-bottom: none;
+}
+
+.order-form-section p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-form div {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5a3e36;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permette solo il ridimensionamento verticale */
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    width: auto; /* Si adatta al contenuto */
+    margin: 20px auto 0 auto; /* Centra il pulsante */
+    padding: 12px 30px;
+    background-color: #c88873; /* Un colore per l'azione, es. arancione bruciato */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #b0705a; /* Un colore più scuro al passaggio del mouse */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .menu-item {
+        flex-direction: column; /* Immagine sopra, testo sotto su schermi piccoli */
+        align-items: center; /* Centra l'immagine */
+        text-align: center;
+    }
+    .menu-item img {
+        margin-right: 0;
+        margin-bottom: 15px; /* Spazio tra immagine e testo */
+        width: 80%; /* Immagine più grande relativa al contenitore */
+        max-width: 250px;
+        height: auto; /* Altezza automatica per mantenere le proporzioni */
+    }
+    .menu-nav a {
+        margin: 5px;
+        display: inline-block; /* Per wrapping corretto */
+    }
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .tagline {
+        font-size: 1em;
+    }
+    .menu-nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+    .contact-form button[type="submit"] {
+        width: 100%; /* Pulsante a larghezza piena */
+    }
+}

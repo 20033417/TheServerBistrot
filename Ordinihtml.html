@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante The Server Bistrot - Il Nostro Menù</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stile aggiuntivo per i checkbox e le label */
+        .menu-item-checkbox {
+            margin-right: 10px;
+            transform: scale(1.2); /* Rende il checkbox leggermente più grande */
+        }
+        .menu-item-details label {
+            display: inline-block; /* Permette di cliccare sul nome del piatto per selezionare */
+            cursor: pointer;
+            font-weight: bold; /* Rende il nome del piatto cliccabile più evidente */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Logo Ristorante -->
+            <h1>The Server Bistrot</h1>
+            <p class="tagline">Autentica cucina italiana, con amore.</p>
+        </header>
+
+        <nav class="menu-nav">
+            <a href="#antipasti">Antipasti</a>
+            <a href="#primi">Primi</a>
+            <a href="#secondi">Secondi</a>
+            <a href="#pizze">Pizze</a>
+            <a href="#dolci">Dolci</a>
+            <a href="#bevande">Bevande</a>
+            <a href="#ordina" class="order-button-nav">Ordina</a>
+        </nav>
+
+        <main>
+            <form action="https://formspree.io/f/mbloewor" method="POST" class="contact-form" id="orderForm">
+                <section id="antipasti" class="menu-section">
+                    <h2>Antipasti</h2>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="bruschetta" name="piatto_ordinato[]" value="Bruschetta al Pomodoro Fresco" class="menu-item-checkbox">
+                            <label for="bruschetta"><h3>Bruschetta al Pomodoro Fresco</h3></label>
+                            <p>Pane casereccio tostato con pomodorini freschi, basilico, aglio e olio extravergine d'oliva.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="carpaccio_zucchine" name="piatto_ordinato[]" value="Carpaccio di Zucchine Marinate" class="menu-item-checkbox">
+                            <label for="carpaccio_zucchine"><h3>Carpaccio di Zucchine Marinate al Limone</h3></label>
+                            <p>Sottili fette di zucchine fresche marinate con succo di limone, olio extravergine d'oliva e menta fresca, guarnite con croccanti scaglie di mandorle tostate.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="tagliere" name="piatto_ordinato[]" value="Tagliere di Salumi e Formaggi" class="menu-item-checkbox">
+                            <label for="tagliere"><h3>Tagliere di Salumi e Formaggi</h3></label>
+                            <p>Selezione di salumi e formaggi accompagnati da miele e confetture.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="primi" class="menu-section">
+                    <h2>Primi Piatti</h2>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="trofie_zucchine" name="piatto_ordinato[]" value="Trofie Zucchine e Limone" class="menu-item-checkbox">
+                            <label for="trofie_zucchine"><h3>Trofie Fresche con Crema Leggera alla panna </h3></label>
+                            <p>Delicate trofie artigianali avvolte in una leggera crema alla panna con salmone o alternativa prosciutto, profumate con scorza di limone e un tocco di menta (o basilico) fresco. Un primo piatto fresco e gustoso.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="lasagna_bolognese" name="piatto_ordinato[]" value="Lasagna Classica alla Bolognese" class="menu-item-checkbox">
+                            <label for="lasagna_bolognese"><h3>Lasagna Classica alla Bolognese</h3></label>
+                            <p>Sfoglie di pasta fresca all'uovo, ragù tradizionale e besciamella cremosa.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="lasagna_estiva" name="piatto_ordinato[]" value="Lasagna Estiva Zucchine e Speck" class="menu-item-checkbox">
+                            <label for="lasagna_estiva"><h3>Lasagna Estiva con Zucchine, Speck e Prosciutto Crudo</h3></label>
+                            <p>Delicate sfoglie di pasta fresca all'uovo avvolgono un ripieno di zucchine fresche, speck croccante e cremosa besciamella, il tutto arricchito da un tocco finale di prosciutto crudo stagionato.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="carbonara" name="piatto_ordinato[]" value="Spaghetti alla Carbonara" class="menu-item-checkbox">
+                            <label for="carbonara"><h3>Spaghetti alla Carbonara</h3></label>
+                            <p>La vera ricetta romana con guanciale croccante, uova fresche, Pecorino Romano e pepe nero.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="cacio_pepe" name="piatto_ordinato[]" value="Spaghetti Cacio e Pepe" class="menu-item-checkbox">
+                            <label for="cacio_pepe"><h3>Spaghetti Cacio e Pepe</h3></label>
+                            <p>L'autentica tradizione romana: spaghetti mantecati con cremoso Pecorino Romano DOP e abbondante pepe nero macinato fresco.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="secondi" class="menu-section">
+                    <h2>Secondi Piatti</h2>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="pollo_agrumi" name="piatto_ordinato[]" value="Petto di Pollo agli Agrumi" class="menu-item-checkbox">
+                            <label for="pollo_agrumi"><h3>Petto di Pollo Grigliato agli Agrumi</h3></label>
+                            <p>Tenero petto di pollo marinato con succo d'arancia e limone, erbe fresche, e poi grigliato alla perfezione. Servito su un letto di insalata mista</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="insalatona" name="piatto_ordinato[]" value="Insalatona" class="menu-item-checkbox">
+                            <label for="insalatona"><h3>Insalatona</h3></label>
+                            <p> insalata verde mista, foglie verdi, pomodorini, olive taggiasche, uova sode e teneri bocconcini di tonno fresco scottato (o tonno al naturale di qualità), condita con una vinaigrette leggera al limone</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pizze" class="menu-section">
+                    <h2>Le Nostre Pizze</h2>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="pizza_margherita" name="piatto_ordinato[]" value="Pizza Margherita" class="menu-item-checkbox">
+                            <label for="pizza_margherita"><h3>Pizza Margherita</h3></label>
+                            <p>Pomodoro San Marzano, mozzarella fior di latte, basilico fresco e olio extravergine.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="pizza_diavola" name="piatto_ordinato[]" value="Pizza Diavola" class="menu-item-checkbox">
+                            <label for="pizza_diavola"><h3>Pizza Diavola</h3></label>
+                            <p>Pomodoro, mozzarella e salamino piccante.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="pizza_4stagioni" name="piatto_ordinato[]" value="Pizza Quattro Stagioni" class="menu-item-checkbox">
+                            <label for="pizza_4stagioni"><h3>Pizza Quattro Stagioni</h3></label>
+                            <p>Pomodoro, mozzarella, funghi, prosciutto cotto, carciofini e olive.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="dolci" class="menu-section">
+                    <h2>Dolci</h2>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="tiramisu" name="piatto_ordinato[]" value="Tiramisù della Casa" class="menu-item-checkbox">
+                            <label for="tiramisu"><h3>Tiramisù della Casa</h3></label>
+                            <p>Il classico dolce al cucchiaio con savoiardi, caffè, mascarpone e cacao.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-details">
+                            <input type="checkbox" id="sorbetto" name="piatto_ordinato[]" value="Sorbetto al Limone" class="menu-item-checkbox">
+                            <label for="sorbetto"><h3>Sorbetto al limone</h3></label>
+                            <p>Un rinfrescante sorbetto al limone di sicilia</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="bevande" class="menu-section">
+                    <h2>Bevande</h2>
+                    <div class="menu-item-simple">
+                        <input type="checkbox" id="acqua" name="piatto_ordinato[]" value="Acqua Nat/Friz" class="menu-item-checkbox">
+                        <label for="acqua"><h3>Acqua Naturale/Frizzante</h3></label>
+                    </div>
+                    <div class="menu-item-simple">
+                        <input type="checkbox" id="coca" name="piatto_ordinato[]" value="Coca-Cola" class="menu-item-checkbox">
+                        <label for="coca"><h3>Coca-Cola</h3></label>
+                    </div>
+                     <div class="menu-item-simple">
+                        <input type="checkbox" id="fanta" name="piatto_ordinato[]" value="Fanta" class="menu-item-checkbox">
+                        <label for="fanta"><h3>Fanta</h3></label>
+                    </div>
+                     <div class="menu-item-simple">
+                        <input type="checkbox" id="sprite" name="piatto_ordinato[]" value="Sprite" class="menu-item-checkbox">
+                        <label for="sprite"><h3>Sprite</h3></label>
+                    </div>
+                    <div class="menu-item-simple">
+                        <input type="checkbox" id="vino" name="piatto_ordinato[]" value="Vino della Casa" class="menu-item-checkbox">
+                        <label for="vino"><h3>Vino della Casa (Rosso/Bianco) - Calice / Bottiglia</h3></label>
+                    </div>
+                    <div class="menu-item-simple">
+                        <input type="checkbox" id="caffe" name="piatto_ordinato[]" value="Caffè Espresso" class="menu-item-checkbox">
+                        <label for="caffe"><h3>Caffè Espresso</h3></label>
+                    </div>
+                </section>
+
+                <section id="ordina" class="order-form-section">
+                    <h2>Contattaci per Ordinare</h2>
+                    <p>Seleziona i piatti desiderati dal menù qui sopra, poi compila il modulo qui sotto con i tuoi dati. Ti ricontatteremo al più presto per confermare i dettagli del tuo ordine e concordare il ritiro o la consegna.</p>
+                    
+                    <div>
+                        <label for="nome">Il tuo Nome:</label>
+                        <input type="text" id="nome" name="nome_cliente" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Numero di Telefono (opzionale, per ricontatto rapido):</label>
+                        <input type="tel" id="telefono" name="telefono_cliente">
+                    </div>
+                    
+                    <!-- Campo nascosto che verrà popolato da JavaScript con i piatti selezionati -->
+                    <input type="hidden" name="ordine_dettagliato" id="ordine_dettagliato">
+
+                    <div>
+                        <label for="note">Eventuali note o richieste aggiuntive (es. allergie, orario preferito per essere ricontattato, quantità se diverse da 1 per piatto):</label>
+                        <textarea id="note" name="note_cliente" rows="4"></textarea>
+                    </div>
+
+                    <input type="hidden" name="richiesta_da" value="Modulo Ordini Menù Online - The Server Bistrot">
+                    <input type="hidden" name="_next" value="thankyou.html">
+                    <input type="text" name="_gotcha" style="display:none !important">
+
+                    <button type="submit">Invia Richiesta Ordine</button>
+                </section>
+            </form> <!-- Chiusura del tag form -->
+        </main>
+
+        <footer>
+            <p>© 2024 The Server Bistrot - Tutti i diritti riservati.</p>
+            <p>Via Giacomo Leopardi 12, Bollate </p>
+        </footer>
+    </div>
+
+    <script>
+        const orderForm = document.getElementById('orderForm');
+        const hiddenOrderDetailInput = document.getElementById('ordine_dettagliato');
+
+        orderForm.addEventListener('submit', function(event) {
+            // Non preveniamo l'invio predefinito perché Formspree lo gestisce,
+            // ma potremmo farlo se volessimo fare validazioni extra o invio AJAX.
+            // event.preventDefault(); 
+
+            let selectedItems = [];
+            // Seleziona tutti i checkbox con il name="piatto_ordinato[]" CHE SONO CHECKED
+            const checkedItems = document.querySelectorAll('input[name="piatto_ordinato[]"]:checked'); 
+            
+            checkedItems.forEach(function(checkbox) {
+                selectedItems.push(checkbox.value);
+            });
+
+            if (selectedItems.length > 0) {
+                hiddenOrderDetailInput.value = selectedItems.join(', '); // Concatena i piatti separati da virgola e spazio
+            } else {
+                hiddenOrderDetailInput.value = "Nessun piatto selezionato dal menù."; // O lascia vuoto se preferisci
+            }
+
+            // Il form verrà inviato normalmente da qui, con il campo nascosto popolato.
+            // Se si usasse event.preventDefault(), si dovrebbe poi inviare il form via JS:
+            // this.submit(); // oppure fetch API per invio AJAX a Formspree
+        });
+    </script>
+</body>
+</html>
